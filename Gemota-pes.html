@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Evaluation Survey</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="logo container-grid">
+
+        </div>
+        <div class="product-header">
+            <h1>Product Evaluation Survey</h1>
+        </div>
+        <div class="form-grid container-grid">
+
+            <!-- Question 1-->
+            <div class="survey-selection card">
+                <p class="survey-question">
+                    How familiar are you with [business name]?
+                </p>
+                <div class="survey-fillup">
+                    <select name="survey-two" id="selection">
+                        <option value="respond">--Select--</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Question 2-->
+            <div class="survey-selection card">
+                <p class="survey-question">
+                    How familiar are you with [product]?
+                </p>
+                <div class="survey-fillup">
+                    <select name="survey-two" id="selection">
+                        <option value="respond">--Select--</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Question 3-->
+            <div class="survey-radio-button card">
+                <p class="survey-question">Do you own [product]?</p>
+                <div class="survey-fillup ">
+                    <ul class="radio-grid">
+                        <li>
+                            <input type="radio" name="survey-three" checked>
+                            <label for="survey-three">
+                                Yes
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="survey-three">
+                            <label for="survey-three">
+                                No, but I use it regularly
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="survey-three">
+                            <label for="survey-three">
+                                No, but I've used it before
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 4-->
+            <div class="survey-radio-button card">
+                <p class="survey-question">
+                    Did you purchase [product] to replace another
+                    brand's version of the same product?
+                </p>
+                <div class="survey-fillup">
+                    <ul class="radio-grid">
+                        <li>
+                            <input type="radio" name="survey-four" checked>
+                            <label for="survey-four">Yes</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="survey-four">
+                            <label for="survey-four">No</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="survey-four">
+                            <label for="survey-four">Not sure</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="survey-radio-button card">
+                <div class="survey-question">
+                    <p>
+                        Please rate [product] in the following areas, 
+                        according to your experience.
+                    </p>
+                    <div class="survey-fillup">
+                        <div class="radio-grid">
+                            <div class="range-of-rating">
+                                <label class="rating-box"> Poor</label>
+                                <label class="rating-box">Below Average</label>
+                                <label class="rating-box">Average</label>
+                                <label class="rating-box">Above Average</label>
+                                <label class="rating-box">Excellent</label>
+                            </div>
+                            <div class="rating-grid">
+                                <label for="rate-1">Ease of use</label>
+                                <input class="rating-box radio-rating" type="radio" name="rate-1">
+                                <input class="rating-box radio-rating" type="radio" name="rate-1">
+                                <input class="rating-box radio-rating" type="radio" name="rate-1">
+                                <input class="rating-box radio-rating" type="radio" name="rate-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="text-area card">
+                <p class="survey-question">
+                    Before you arrived at the presentation,
+                    what were your expectations?
+                </p>
+                <div class="survey-fillup">
+                    <textarea name="survey-six" cols="30" rows="10"></textarea>
+                    <p class="character-limit">Characters Remaining: 500</p>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="text-area card">
+                <p class="survey-question">
+                    In a few words, why did you rate [product] this way?
+                </p>
+                <div class="survey-fillup">
+                    <textarea name="survey-six" cols="30" rows="10"></textarea>
+                    <p class="character-limit">Characters Remaining: 500</p>
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="text-area card">
+                <p class="survey-question">
+                    In a few words, what do you like most about [product]?
+                </p>
+                <div class="survey-fillup">
+                    <textarea name="survey-six" cols="30" rows="10"></textarea>
+                    <p class="character-limit">Characters Remaining: 500</p>
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="text-area card">
+                <p class="survey-question">
+                    In a few words, what do you dislike most about [product]?
+                </p>
+                <div class="survey-fillup">
+                    <textarea name="survey-six" cols="30" rows="10"></textarea>
+                    <p class="character-limit">Characters Remaining: 500</p>
+                </div>
+            </div>
+
+            <!-- Question 1-->
+            <div class="survey-selection card">
+                <p class="survey-question">
+                    How likely are you to buy other products from
+                    [business name], given yourexperience with [product]?</p>
+                <div class="survey-fillup">
+                    <select name="survey-two" id="selection">
+                        <option value="respond">--Select--</option>
+                    </select>
+                </div>
+            </div>
+        </div> <!-- Form-grid end -->
+   
+    </div> <!-- Main container end -->
+</body>
+</html>
