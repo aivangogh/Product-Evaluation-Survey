@@ -10,7 +10,6 @@
 }
 
 body {
-    
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -62,6 +61,7 @@ ul {
     grid-template-columns: repeat(auto, 1fr);
     margin-top: 60px;
     margin-bottom: 60px;
+    padding-bottom: 50px;
 }
 
 .card .survey-question {
@@ -86,42 +86,99 @@ select {
     padding: 5px;
 }
 
+.default-radio {
+    display: none;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+.custom-radio {
+    border-radius: 50%;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: 2px var(--accent-color) solid;
+    padding: 2px;
+}
+
+.custom-radio::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    transform: scale(0);
+}
+
+.default-radio:checked + .custom-radio::after {
+    transform: scale(1);
+}
+
 .radio-grid li {
+    display: flex;
+    align-items: center;
     margin: 10px 0;
 }
 
-
-
-.range-of-rating {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-.rating-box{
-    margin: 5px;
-    height: auto;
-    width: 10%;
-    font-size: 15px;
-}
-
-.rating-grid {
-    display: flex;
-    justify-content: space-between;
-}
-
-.radio-rating {
-    display: inline;
+.radio-grid li label {
+    margin-left: 20px;
 }
 
 
 
+/*===== Rating radio =====*/
+
+.radio-scale-grid {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: grid;
+    grid-template-columns: 2fr repeat(5, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+}
+
+#scale-1 {
+    grid-column: 2/3;
+    grid-row: 1;
+}
+
+#scale-2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+#scale-3 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+
+#scale-4 {
+    grid-column: 5/6;
+    grid-row: 1/2;
+}
+
+#scale-5 {
+    grid-column: 6/7;
+    grid-row: 1/2;
+}
+
+#tag {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
 
 
 
-/* .altenate-bg {
+
+
+
+.altenate-background {
+    position: relative;
     background-color: #fff;
-} */
+}
 
 .survey-fillup textarea {
     resize: none;
@@ -134,5 +191,95 @@ select {
     font-size: 10px;
     margin-top: 15px;
 }
+
+.floating-instruction {
+    margin: 10px 0 -10px 20px;
+}
+/*===== Bar Scale =====*/
+
+.rating-scale-identation {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.rating-scale-bar {
+    margin: 10px 0 10px 40px;
+    border: 1px var(--accent-color) solid;
+    height: 5px;
+    width: 370px;
+}
+
+.rating-scale-number {
+    width: 60%;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*===== Number scale =====*/
+.survey-number-range-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.survey-number-range-grid span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 65px;
+    height: 55px;
+    border-radius: 5px;
+}
+
+.survey-number-range-indentation {
+    margin-top: 15px;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.survey-number-range-grid .range-number-1 {
+    background-color: rgba(255, 120, 88, 0.1);
+}
+
+.survey-number-range-grid .range-number-2 {
+    background-color: rgba(255, 120, 88, 0.2);
+}
+
+.survey-number-range-grid .range-number-3{
+    background-color: rgba(255, 120, 88, 0.3);
+}
+
+.survey-number-range-grid .range-number-4 {
+    background-color: rgba(255, 120, 88, 0.4);
+}
+
+.survey-number-range-grid .range-number-5 {
+    background-color: rgba(255, 120, 88, 0.5);
+}
+
+.survey-number-range-grid .range-number-6 {
+    background-color: rgba(255, 120, 88, 0.6);
+}
+
+.survey-number-range-grid .range-number-7 {
+    background-color: rgba(255, 120, 88, 0.7);
+}
+
+.survey-number-range-grid .range-number-8 {
+    background-color: rgba(255, 120, 88, 0.8);
+}
+
+.survey-number-range-grid .range-number-9 {
+    background-color: rgba(255, 120, 88, 0.9);
+}
+
+.survey-number-range-grid .range-number-10 {
+    background-color: rgba(255, 120, 88, 1.0);
+}
+
 
 

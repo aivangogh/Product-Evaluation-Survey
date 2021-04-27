@@ -48,18 +48,21 @@
                     <ul class="radio-grid">
                         <li>
                             <input type="radio" name="survey-three" checked>
+                            <div class="custom-radio"></div>
                             <label for="survey-three">
                                 Yes
                             </label>
                         </li>
                         <li>
                             <input type="radio" name="survey-three">
+                            <div class="custom-radio"></div>
                             <label for="survey-three">
                                 No, but I use it regularly
                             </label>
                         </li>
                         <li>
                             <input type="radio" name="survey-three">
+                            <div class="custom-radio"></div>
                             <label for="survey-three">
                                 No, but I've used it before
                             </label>
@@ -77,15 +80,18 @@
                 <div class="survey-fillup">
                     <ul class="radio-grid">
                         <li>
-                            <input type="radio" name="survey-four" checked>
+                            <input type="radio" name="survey-four">
+                            <div class="custom-radio"></div>
                             <label for="survey-four">Yes</label>
                         </li>
                         <li>
                             <input type="radio" name="survey-four">
+                            <div class="custom-radio"></div>
                             <label for="survey-four">No</label>
                         </li>
                         <li>
                             <input type="radio" name="survey-four">
+                            <div class="custom-radio"></div>
                             <label for="survey-four">Not sure</label>
                         </li>
                     </ul>
@@ -98,24 +104,44 @@
                         Please rate [product] in the following areas, 
                         according to your experience.
                     </p>
-                    <div class="survey-fillup">
-                        <div class="radio-grid">
-                            <div class="range-of-rating">
-                                <label class="rating-box"> Poor</label>
-                                <label class="rating-box">Below Average</label>
-                                <label class="rating-box">Average</label>
-                                <label class="rating-box">Above Average</label>
-                                <label class="rating-box">Excellent</label>
-                            </div>
-                            <div class="rating-grid">
-                                <label for="rate-1">Ease of use</label>
-                                <input class="rating-box radio-rating" type="radio" name="rate-1">
-                                <input class="rating-box radio-rating" type="radio" name="rate-1">
-                                <input class="rating-box radio-rating" type="radio" name="rate-1">
-                                <input class="rating-box radio-rating" type="radio" name="rate-1">
-                            </div>
+                </div>
+                <div class="radio-scale-grid">
+                    <span id="scale-1">Poor</span>
+                    <span id="scale-2">Below Average</span>
+                    <span id="scale-3">Average</span>
+                    <span id="scale-4">Above Average</span>
+                    <span id="scale-5">Excellent</span>
+                    <div class="scale">
+                        
+                    <div id="tag">Ease of use</div>    
+                    
+                    <div class="radio-container">
+                        
+                        <div class="radio-scale-1">
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
                         </div>
                     </div>
+
+
                 </div>
             </div>
 
@@ -128,6 +154,27 @@
                 <div class="survey-fillup">
                     <textarea name="survey-six" cols="30" rows="10"></textarea>
                     <p class="character-limit">Characters Remaining: 500</p>
+                </div>
+            </div>
+
+            <p class="floating-instruction">Question(s) are hidden due to logic or data population settings.</p>
+
+            <!-- Question 7 -->
+            <div class="survey-rating-scale card">
+                <p class="survey-question">Overall, how would you rate [product] on the scale below?</p>
+                <div class="survey-fillup">
+                    <div class="rating-scale-identation">
+                        <span>The worst!</span>
+                        <span>The best!</span>
+                    </div>
+                    <div class="rating-scale-bar"></div>
+                    <div class="rating-scale-number">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                    </div>
                 </div>
             </div>
 
@@ -164,7 +211,7 @@
                 </div>
             </div>
 
-            <!-- Question 1-->
+            <!-- Question 11-->
             <div class="survey-selection card">
                 <p class="survey-question">
                     How likely are you to buy other products from
@@ -173,6 +220,31 @@
                     <select name="survey-two" id="selection">
                         <option value="respond">--Select--</option>
                     </select>
+                </div>
+            </div>
+
+            <!-- Question 12 -->
+            <div class="survey-number-range card">
+                <div class="survey-question">
+                    <p>How likely is it that you would recommend this product to a friend or colleague?</p>
+                </div>
+                <div class="survey-fillup">
+                    <div class="survey-number-range-grid">
+                        <span class="range-number-1">1</span>
+                        <span class="range-number-2">2</span>
+                        <span class="range-number-3">3</span>
+                        <span class="range-number-4">4</span>
+                        <span class="range-number-5">5</span>
+                        <span class="range-number-6">6</span>
+                        <span class="range-number-7">7</span>
+                        <span class="range-number-8">8</span>
+                        <span class="range-number-9">9</span>
+                        <span class="range-number-10">10</span>
+                    </div>
+                    <div class="survey-number-range-indentation">
+                        <p>Not at all Likely</p>
+                        <p>Extremely Likely</p>
+                    </div>
                 </div>
             </div>
         </div> <!-- Form-grid end -->
