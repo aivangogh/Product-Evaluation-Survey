@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Evaluation Survey</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="./stylesheet.css">
 </head>
 <body>
     <div class="main-container">
         <div class="logo container-grid">
-
+            <img src="./company-logo.png" alt="company-logo">
         </div>
         <div class="product-header">
             <h1>Product Evaluation Survey</h1>
@@ -20,11 +17,15 @@
             <!-- Question 1-->
             <div class="survey-selection card">
                 <p class="survey-question">
-                    How familiar are you with [business name]?
+                    How familiar are you with Van Arts?
                 </p>
                 <div class="survey-fillup">
                     <select name="survey-two" id="selection">
                         <option value="respond">--Select--</option>
+                        <option value="yes">Yes</option>\
+                        <option value="maybe">Sounds familiar</option>
+                        <option value="no">No</option>
+                        
                     </select>
                 </div>
             </div>
@@ -32,18 +33,22 @@
             <!-- Question 2-->
             <div class="survey-selection card">
                 <p class="survey-question">
-                    How familiar are you with [product]?
+                    How familiar are you with Vexel Art and Pet Vector?
                 </p>
                 <div class="survey-fillup">
                     <select name="survey-two" id="selection">
                         <option value="respond">--Select--</option>
+                        <option value="respond">Yes</option>
+                        <option value="respond">Only Vexel Art</option>
+                        <option value="respond">Only Pet Vector</option>
+                        <option value="respond">No</option>
                     </select>
                 </div>
             </div>
 
             <!-- Question 3-->
             <div class="survey-radio-button card">
-                <p class="survey-question">Do you own [product]?</p>
+                <p class="survey-question">Do you own Vexel Art or Pet Vector?</p>
                 <div class="survey-fillup ">
                     <ul class="radio-grid">
                         <li>
@@ -74,8 +79,8 @@
             <!-- Question 4-->
             <div class="survey-radio-button card">
                 <p class="survey-question">
-                    Did you purchase [product] to replace another
-                    brand's version of the same product?
+                    Did you purchase Vexel Art or Pet Vector to replace another
+                    artists version of the same art?
                 </p>
                 <div class="survey-fillup">
                     <ul class="radio-grid">
@@ -101,23 +106,48 @@
             <div class="survey-radio-button card">
                 <div class="survey-question">
                     <p>
-                        Please rate [product] in the following areas, 
+                        Please rate Vexel Art and Pet Vector in the following areas,
                         according to your experience.
                     </p>
                 </div>
                 <div class="radio-scale-grid">
-                    <span id="scale-1">Poor</span>
-                    <span id="scale-2">Below Average</span>
-                    <span id="scale-3">Average</span>
-                    <span id="scale-4">Above Average</span>
-                    <span id="scale-5">Excellent</span>
-                    <div class="scale">
-                        
-                    <div id="tag">Ease of use</div>    
-                    
-                    <div class="radio-container">
-                        
-                        <div class="radio-scale-1">
+                    <div class="space alternate-bg-color"></div>
+                    <div class="radio-header alternate-bg-color">
+                        <span>Poor</span>
+                        <span>Below Average</span>
+                        <span>Average</span>
+                        <span>Above Average</span>
+                        <span>Excellent</span>
+                    </div>
+    
+                    <div class="radio-scales">
+                        <span class="tags">Ease of use</span>
+                        <div class="radio-buttons">
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            </div>
+                        </div>
+
+                        <span class="tags alternate-bg-color">Effectiveness</span>
+                        <div class="radio-buttons alternate-bg-color">
                             <label for="rating-scale-1">
                                 <input type="radio" id="rating-scale-1" class="default-radio">
                                 <div class="custom-radio"></div>
@@ -139,8 +169,198 @@
                                 <div class="custom-radio"></div>
                             </label>
                         </div>
-                    </div>
 
+                        <span class="tags">Convenience</span>
+                        <div class="radio-buttons">
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                        </div>
+
+                        <span class="tags alternate-bg-color">Value</span>
+                        <div class="radio-buttons alternate-bg-color">
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                        </div>
+
+                        <span class="tags">Price</span>
+                        <div class="radio-buttons">
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                        </div>
+
+                        <span class="tags alternate-bg-color">Quality</span>
+                        <div class="radio-buttons alternate-bg-color">
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                        </div>
+
+                        <span class="tags">Look and feel</span>
+                        <div class="radio-buttons">
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                        </div>
+
+                        <span class="tags alternate-bg-color">Innovative</span>
+                        <div class="radio-buttons alternate-bg-color">
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                        </div>
+
+                        <span class="tags">Durability/Robustness</span>
+                        <div class="radio-buttons">
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                        </div>
+
+                        <span class="tag-10 tags alternate-bg-color">Customer Service</span>
+                        <div class="radio-button-10 radio-buttons alternate-bg-color">
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                            <label for="rating-scale-1">
+                                <input type="radio" id="rating-scale-1" class="default-radio">
+                                <div class="custom-radio"></div>
+                            </label>
+                        </div>
 
                 </div>
             </div>
@@ -161,7 +381,7 @@
 
             <!-- Question 7 -->
             <div class="survey-rating-scale card">
-                <p class="survey-question">Overall, how would you rate [product] on the scale below?</p>
+                <p class="survey-question">Overall, how would you rate Vexel Art and Pet Vector on the scale below?</p>
                 <div class="survey-fillup">
                     <div class="rating-scale-identation">
                         <span>The worst!</span>
@@ -181,7 +401,7 @@
             <!-- Question 8 -->
             <div class="text-area card">
                 <p class="survey-question">
-                    In a few words, why did you rate [product] this way?
+                    In a few words, why did you rate Vexel Art and Pet Vector this way?
                 </p>
                 <div class="survey-fillup">
                     <textarea name="survey-six" cols="30" rows="10"></textarea>
@@ -192,7 +412,7 @@
             <!-- Question 9 -->
             <div class="text-area card">
                 <p class="survey-question">
-                    In a few words, what do you like most about [product]?
+                    In a few words, what do you like most about Vexel Art and Pet Vector?
                 </p>
                 <div class="survey-fillup">
                     <textarea name="survey-six" cols="30" rows="10"></textarea>
@@ -203,7 +423,7 @@
             <!-- Question 10 -->
             <div class="text-area card">
                 <p class="survey-question">
-                    In a few words, what do you dislike most about [product]?
+                    In a few words, what do you dislike most about Vexel Art and Pet Vector?
                 </p>
                 <div class="survey-fillup">
                     <textarea name="survey-six" cols="30" rows="10"></textarea>
@@ -215,7 +435,7 @@
             <div class="survey-selection card">
                 <p class="survey-question">
                     How likely are you to buy other products from
-                    [business name], given yourexperience with [product]?</p>
+                    Van Arts, given your experience with Vexel Art or Pet Vector?</p>
                 <div class="survey-fillup">
                     <select name="survey-two" id="selection">
                         <option value="respond">--Select--</option>
@@ -226,7 +446,7 @@
             <!-- Question 12 -->
             <div class="survey-number-range card">
                 <div class="survey-question">
-                    <p>How likely is it that you would recommend this product to a friend or colleague?</p>
+                    <p>How likely is it that you would recommend this art to a friend or colleague?</p>
                 </div>
                 <div class="survey-fillup">
                     <div class="survey-number-range-grid">

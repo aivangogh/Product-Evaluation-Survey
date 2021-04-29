@@ -3,6 +3,7 @@
     --accent-color: #ff7858;
 }
 
+/*===== property reset =====*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,14 +19,17 @@ ul {
 }
 
 .main-container {
+    width: 940px;
+    margin: auto;
+    padding-bottom: 10px;
     background: linear-gradient(to bottom, #fff5dd, #ffe7dd);
-    width: 925px;
-    margin: auto
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*===== Utilities =====*/
 .container-grid {
-    width: 85%;
+    width: 88%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -35,11 +39,18 @@ ul {
 }
 
 .card {
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .logo {
-    height: 125px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    height: 70px;
 }
 
 .product-header {
@@ -64,6 +75,7 @@ ul {
     padding-bottom: 50px;
 }
 
+/*===== Card header bg =====*/
 .card .survey-question {
     background-color: #fff;
     padding: 20px;
@@ -71,19 +83,34 @@ ul {
     border-top-right-radius: 10px;
 }
 
+/*===== Card content bg =====*/
 .card .survey-fillup {
     background-color: rgba(255, 255, 255, 0.5) ;
-    padding: 20px;
+    padding: 10px 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
+/*===== Custom select arrow =====*/
 select {
-    border: 1px var(--accent-color) solid;
+    border: thin var(--accent-color) solid;
     background-color: #fff;
     font-size: 16px;
+    height: 35px;
     width: 20rem;
     padding: 5px;
+    margin: 5px 0;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #fff 50%),
+                      linear-gradient(135deg, #fff 50%, transparent 50%),
+                      linear-gradient(to right, var(--accent-color), var(--accent-color));
+    background-position: calc(100% - 16px) calc(15px),
+                         calc(100% - 12px) calc(15px),
+                         100% 0;
+    background-size: 5px 5px,
+                     5px 5px,
+                     2.2em 2.1em;
+    background-repeat: no-repeat;
 }
 
 .default-radio {
@@ -120,66 +147,88 @@ input[type='radio'] {
 .radio-grid li {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    padding: 7px 0;
 }
 
 .radio-grid li label {
     margin-left: 20px;
 }
 
-
-
 /*===== Rating radio =====*/
-
-.radio-scale-grid {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: grid;
-    grid-template-columns: 2fr repeat(5, 1fr);
-    grid-template-rows: repeat(11, 1fr);
-}
-
-#scale-1 {
-    grid-column: 2/3;
-    grid-row: 1;
-}
-
-#scale-2 {
-    grid-column: 3/4;
-    grid-row: 1/2;
-}
-
-#scale-3 {
-    grid-column: 4/5;
-    grid-row: 1/2;
-}
-
-#scale-4 {
-    grid-column: 5/6;
-    grid-row: 1/2;
-}
-
-#scale-5 {
-    grid-column: 6/7;
-    grid-row: 1/2;
-}
-
-#tag {
-    grid-column: 1/2;
-    grid-row: 2/3;
-}
-
-
-
-
-
-
-.altenate-background {
-    position: relative;
+.alternate-bg-color {
     background-color: #fff;
 }
 
+.radio-scale-grid {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        'space radio-header'
+        'radio-container radio-container';
+}
+
+.space {
+    grid-area: space;
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+.radio-header {
+    grid-area: radio-header;
+    grid-column: 2/3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.radio-header span{
+    width: 90px;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.radio-scales {
+    grid-area: radio-container;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.tags {
+    display: flex;
+    align-items: center;
+    padding: 17px 0 17px 20px;
+    font-size: 14px;
+}
+
+.tag-10 {
+    border-bottom-left-radius: 10px;
+}
+
+.radio-button-10 {
+    border-bottom-right-radius: 10px;
+}
+
+.radio-buttons {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.radio-buttons label{
+    margin: 0 30px 0 50px;
+}
+
+
+/*===== Textarea =====*/
 .survey-fillup textarea {
     resize: none;
     width: 100%;
@@ -189,19 +238,21 @@ input[type='radio'] {
 
 .character-limit {
     font-size: 10px;
-    margin-top: 15px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .floating-instruction {
     margin: 10px 0 -10px 20px;
 }
-/*===== Bar Scale =====*/
 
+/*===== Bar Scale =====*/
 .rating-scale-identation {
+    margin-top: 20px;
     width: 60%;
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .rating-scale-bar {
@@ -213,6 +264,7 @@ input[type='radio'] {
 
 .rating-scale-number {
     width: 60%;
+    margin-bottom: 10px;
     font-size: 12px;
     display: flex;
     justify-content: space-around;
@@ -241,6 +293,7 @@ input[type='radio'] {
     justify-content: space-between;
 }
 
+        /* Monochrome color */
 .survey-number-range-grid .range-number-1 {
     background-color: rgba(255, 120, 88, 0.1);
 }
